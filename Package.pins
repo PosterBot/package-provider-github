@@ -1,0 +1,12 @@
+{
+  "autoPin": true,
+  "pins": [
+    {
+      "package": "DateToolsSwift",
+      "reason": null,
+      "repositoryURL": "https://github.com/MatthewYork/DateTools.git",
+      "version": "2.0.3"
+    }
+  ],
+  "version": 1
+}
