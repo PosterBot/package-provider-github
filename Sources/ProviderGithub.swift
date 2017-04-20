@@ -5,6 +5,10 @@ public class Github {
   typealias responseClosure = ((_ json: String) -> Void)
   let serverURL = "https://api.github.com"
 
+  public init() {
+    
+  }
+
   func processRequest(url: String, params: [String: String]? = nil, response: @escaping responseClosure) {
     let url = url.toURL(withParams: params ?? [:])
     URLSession.shared.dataTask(with: url!) { data, _, _ in
