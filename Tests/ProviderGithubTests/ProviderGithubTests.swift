@@ -1,7 +1,7 @@
 import XCTest
 @testable import ProviderGithub
 
-class MockGitHub: ProviderGithub {
+class MockGitHub: Github {
   var responseJson = ""
   override func processRequest(url: String, params: [String: String]?, response: @escaping (_ json: String) -> Void ) {
     response(responseJson)
@@ -10,7 +10,7 @@ class MockGitHub: ProviderGithub {
 
 class ProviderGithubTests: XCTestCase {
     func testServerIP() {
-        XCTAssertEqual(ProviderGithub().serverURL, "https://api.github.com")
+        XCTAssertEqual(Github().serverURL, "https://api.github.com")
     }
 
     func testGetTrands() {

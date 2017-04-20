@@ -1,6 +1,6 @@
 import Foundation
 
-public class ProviderGithub {
+public class Github {
 
   typealias responseClosure = ((_ json: String) -> Void)
   let serverURL = "https://api.github.com"
