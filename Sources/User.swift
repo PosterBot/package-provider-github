@@ -1,20 +1,20 @@
 import Foundation
 import ObjectMapper
 
-struct User : Mappable {
+public struct User : Mappable {
 
-  var login: String!
-  var id: Int!
-  var avatarUrl: String?
-  var gravatarId: String?
-  var url: String!
-  var receivedEventsUrl: String!
-  var type: String!
+  public var login: String!
+  public var id: Int!
+  public var avatarUrl: String?
+  public var gravatarId: String?
+  public var url: String!
+  public var receivedEventsUrl: String!
+  public var type: String!
 
-  init?(map: Map) { }
+  public init?(map: Map) { }
 
   // Mappable
-  mutating func mapping(map: Map) {
+  public mutating func mapping(map: Map) {
     login             <- map["login"]
     id                <- map["id"]
     avatarUrl         <- map["avatar_url"]

@@ -1,34 +1,34 @@
 import Foundation
 import ObjectMapper
 
-struct Repository : Mappable {
-  var id: Int!
-  var name: String!
-  var fullName: String!
-  var owner: User!
-  var isPrivate : Bool!
-  var htmlUrl: String!
-  var description: String!
-  var isFork: Bool!
-  var url: String!
-  var createdAt: Date?
-  var updatedAt: Date?
-  var pushedAt: Date?
-  var homapage: String!
-  var size: Int!
-  var stargazersCount: Int!
-  var watchersCount: Int!
-  var language: String!
-  var forksCount: Int!
-  var openIssuesCount: Int!
-  var masterBranch: String!
-  var defaultBranch: String!
-  var score: Float!
+public struct Repository : Mappable {
+  public var id: Int!
+  public var name: String!
+  public var fullName: String!
+  public var owner: User!
+  public var isPrivate : Bool!
+  public var htmlUrl: String!
+  public var description: String!
+  public var isFork: Bool!
+  public var url: String!
+  public var createdAt: Date?
+  public var updatedAt: Date?
+  public var pushedAt: Date?
+  public var homapage: String!
+  public var size: Int!
+  public var stargazersCount: Int!
+  public var watchersCount: Int!
+  public var language: String!
+  public var forksCount: Int!
+  public var openIssuesCount: Int!
+  public var masterBranch: String!
+  public var defaultBranch: String!
+  public var score: Float!
 
-  init?(map: Map) { }
+  public init?(map: Map) { }
 
   // Mappable
-  mutating func mapping(map: Map) {
+  public mutating func mapping(map: Map) {
     id              <- map["id"]
     name            <- map["name"]
     fullName        <- map["full_name"]

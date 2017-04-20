@@ -1,6 +1,6 @@
 import Foundation
 
-class ProviderGithub {
+public class ProviderGithub {
 
   typealias responseClosure = ((_ json: String) -> Void)
   let serverURL = "https://api.github.com"
@@ -14,7 +14,7 @@ class ProviderGithub {
     }.resume()
   }
 
-  func search(q: String? = nil, sort: SortType?, order: OrderType?, _ response:  @escaping ((_ results:Results<Repository>) -> Void)) {
+  public func search(q: String? = nil, sort: SortType?, order: OrderType?, _ response:  @escaping ((_ results:Results<Repository>) -> Void)) {
     var params = [String: String]()
     if let q = q {
       params["q"] = q
@@ -32,20 +32,20 @@ class ProviderGithub {
     }
   }
 
-  func getTrands(_ response: @escaping ((_ repositories:[Repository]) -> Void) ) {
+  public func getTrands(_ response: @escaping ((_ repositories:[Repository]) -> Void) ) {
     search(q:"created:>\(Date().lastWeek)", sort: .stars, order: .desc) { results in
       response(results.items)
     }
   }
 }
 
-enum SortType: String {
+public enum SortType: String {
   case stars   = "stars"
   case forks   = "forks"
   case updated = "updated"
 }
 
-enum OrderType: String {
+public enum OrderType: String {
   case asc  = "asc"
   case desc = "desc"
 }
